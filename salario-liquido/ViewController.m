@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CalculateController.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.dependentsLabel.text = @"0";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)changedNumberOfDependents:(id)sender {
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    self.dependentsLabel.text = [numberFormatter stringFromNumber: @(self.dependentsControl.value)];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"GoToCalculation"]) {
+        CalculateController * calculateController = [segue destinationViewController];
+        calculateController.grossSalaryValue = self.grossSalaryField.text;
+        calculateController.dependentsValue = self.dependentsLabel.text;
+    }
+}
 @end

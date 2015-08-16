@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C809F04B1B80515C001D67EF /* CalculateController.m in Sources */ = {isa = PBXBuildFile; fileRef = C809F04A1B80515C001D67EF /* CalculateController.m */; };
 		C88155C11B8030AC009FC660 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C88155C01B8030AC009FC660 /* main.m */; };
 		C88155C41B8030AC009FC660 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C88155C31B8030AC009FC660 /* AppDelegate.m */; };
 		C88155C71B8030AC009FC660 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88155C61B8030AC009FC660 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C809F0491B80515C001D67EF /* CalculateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateController.h; sourceTree = "<group>"; };
+		C809F04A1B80515C001D67EF /* CalculateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateController.m; sourceTree = "<group>"; };
 		C88155BB1B8030AC009FC660 /* salario-liquido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "salario-liquido.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88155BF1B8030AC009FC660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88155C01B8030AC009FC660 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				C88155C81B8030AC009FC660 /* Main.storyboard */,
 				C88155CB1B8030AC009FC660 /* Images.xcassets */,
 				C88155CD1B8030AC009FC660 /* LaunchScreen.xib */,
+				C809F0491B80515C001D67EF /* CalculateController.h */,
+				C809F04A1B80515C001D67EF /* CalculateController.m */,
 				C88155BE1B8030AC009FC660 /* Supporting Files */,
 			);
 			path = "salario-liquido";
@@ -168,6 +173,7 @@
 				TargetAttributes = {
 					C88155BA1B8030AC009FC660 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = JN3ACWTYPY;
 					};
 					C88155D31B8030AC009FC660 = {
 						CreatedOnToolsVersion = 6.4;
@@ -222,6 +228,7 @@
 				C88155C71B8030AC009FC660 /* ViewController.m in Sources */,
 				C88155C41B8030AC009FC660 /* AppDelegate.m in Sources */,
 				C88155C11B8030AC009FC660 /* main.m in Sources */,
+				C809F04B1B80515C001D67EF /* CalculateController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "salario-liquido/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +369,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "salario-liquido/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +431,7 @@
 				C88155E01B8030AC009FC660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C88155E11B8030AC009FC660 /* Build configuration list for PBXNativeTarget "salario-liquidoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +440,7 @@
 				C88155E31B8030AC009FC660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

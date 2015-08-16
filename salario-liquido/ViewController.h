@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
-
+@property (weak, nonatomic) IBOutlet UILabel *dependentsLabel;
+@property (weak, nonatomic) IBOutlet UITextField *grossSalaryField;
+@property (weak, nonatomic) IBOutlet UIStepper *dependentsControl;
+- (IBAction)changedNumberOfDependents:(id)sender;
 @end
 
