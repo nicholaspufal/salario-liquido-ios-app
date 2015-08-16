@@ -56,8 +56,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-zI-e0L">
-                                <rect key="frame" x="178" y="346" width="245" height="47"/>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-zI-e0L">
+                                <rect key="frame" x="178" y="355" width="245" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="245" id="UEJ-28-Yw0"/>
                                 </constraints>
@@ -75,18 +75,29 @@
                                     <action selector="changedNumberOfDependents:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hiw-ld-IcK"/>
                                 </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Informações calculadas de acordo com os valores fornecidos pelo governo para o ano de 2015" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRG-4y-o1y">
+                                <rect key="frame" x="197" y="43" width="207" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="mI5-58-ldg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hRG-4y-o1y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="1Ef-U2-FM2"/>
                             <constraint firstItem="agM-vS-Yo6" firstAttribute="centerX" secondItem="6Ll-zI-e0L" secondAttribute="centerX" id="639-U3-s2K"/>
                             <constraint firstItem="agM-vS-Yo6" firstAttribute="centerX" secondItem="Tpm-e5-8ea" secondAttribute="centerX" id="76H-X1-UAB"/>
                             <constraint firstItem="agM-vS-Yo6" firstAttribute="top" secondItem="Tpm-e5-8ea" secondAttribute="bottom" constant="17" id="EFC-vX-0Hu"/>
                             <constraint firstItem="a5n-Zu-D0G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="96" id="EXR-5S-t3P"/>
                             <constraint firstItem="Tpm-e5-8ea" firstAttribute="centerX" secondItem="UNa-5Y-LMD" secondAttribute="centerX" id="Ews-Xo-yZY"/>
                             <constraint firstItem="6Ll-zI-e0L" firstAttribute="top" secondItem="agM-vS-Yo6" secondAttribute="bottom" constant="25" id="IkB-dy-TEd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Ll-zI-e0L" secondAttribute="bottom" constant="207" id="PJb-EN-y8d"/>
                             <constraint firstItem="UNa-5Y-LMD" firstAttribute="centerX" secondItem="fD7-NU-o91" secondAttribute="centerX" id="Y5o-Ye-AX0"/>
+                            <constraint firstItem="a5n-Zu-D0G" firstAttribute="top" secondItem="hRG-4y-o1y" secondAttribute="bottom" constant="14" id="ZsN-8F-LMV"/>
                             <constraint firstItem="fD7-NU-o91" firstAttribute="top" secondItem="a5n-Zu-D0G" secondAttribute="bottom" constant="19" id="biX-MC-Jg1"/>
+                            <constraint firstItem="hRG-4y-o1y" firstAttribute="centerX" secondItem="a5n-Zu-D0G" secondAttribute="centerX" id="cEe-Bj-hff"/>
                             <constraint firstItem="a5n-Zu-D0G" firstAttribute="centerX" secondItem="fD7-NU-o91" secondAttribute="centerX" id="gX2-6o-MzN"/>
                             <constraint firstItem="agM-vS-Yo6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kmg-gG-SHV"/>
                             <constraint firstItem="Tpm-e5-8ea" firstAttribute="top" secondItem="UNa-5Y-LMD" secondAttribute="bottom" constant="17" id="o9C-xy-Whg"/>
@@ -134,19 +145,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7a-cg-Hfx">
-                                <rect key="frame" x="164" y="439" width="273" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="273" id="YjE-5Q-PgI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Calcular usando outro valor">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="41w-zm-GvP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descontos:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfl-oc-qcs">
                                 <rect key="frame" x="251" y="195" width="99" height="21"/>
                                 <constraints>
@@ -204,6 +202,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7a-cg-Hfx">
+                                <rect key="frame" x="164" y="426" width="273" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="YjE-5Q-PgI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Calcular usando outro valor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="41w-zm-GvP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
