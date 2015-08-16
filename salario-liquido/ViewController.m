@@ -32,8 +32,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"GoToCalculation"]) {
         CalculateController * calculateController = [segue destinationViewController];
-        calculateController.grossSalaryValue = self.grossSalaryField.text;
+        calculateController.grossSalaryValue = [self grossSalaryText:self.grossSalaryField];
         calculateController.dependentsValue = self.dependentsLabel.text;
     }
+}
+
+- (NSString *)grossSalaryText:(UITextField *) grossSalaryField {
+    if ([grossSalaryField.text isEqualToString:@""]) return @"0.00";
+    return grossSalaryField.text;
 }
 @end

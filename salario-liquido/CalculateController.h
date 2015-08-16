@@ -14,4 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *dependentsLabel;
 @property NSString * grossSalaryValue;
 @property NSString * dependentsValue;
+@property NSDictionary * responsePayload;
+@property (weak, nonatomic) IBOutlet UILabel *INSSLabel;
+@property (weak, nonatomic) IBOutlet UILabel *IRRFLabel;
+@property (weak, nonatomic) IBOutlet UILabel *netSalaryLabel;
 @end
