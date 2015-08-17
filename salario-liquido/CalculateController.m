@@ -30,7 +30,7 @@
 
 - (void)calculateNetSalary {
     NSString * endpointString = [NSString
-                                 stringWithFormat:@"http://localhost:3000/calculate_net_salary?grossSalary=%@&dependents=%@",
+                                 stringWithFormat:@"https://salario-liquido.herokuapp.com/calculate_net_salary?grossSalary=%@&dependents=%@",
                                  self.grossSalaryValue,
                                  self.dependentsValue];
     NSURL * endpoint = [NSURL URLWithString:endpointString];
