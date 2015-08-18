@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+
     // Override point for customization after application launch.
     return YES;
 }

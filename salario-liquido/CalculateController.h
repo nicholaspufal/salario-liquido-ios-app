@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface CalculateController : UIViewController
 
@@ -18,4 +19,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *INSSLabel;
 @property (weak, nonatomic) IBOutlet UILabel *IRRFLabel;
 @property (weak, nonatomic) IBOutlet UILabel *netSalaryLabel;
+@property (strong, nonatomic) ADBannerView * adView;
 @end

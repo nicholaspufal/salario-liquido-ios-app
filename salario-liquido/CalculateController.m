@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Nicholas Pufal. All rights reserved.
 //
 
+#import "ViewController.h"
 #import "CalculateController.h"
 
 @interface CalculateController ()
@@ -16,12 +17,30 @@
 @synthesize grossSalaryValue;
 @synthesize dependentsValue;
 
+// Use a single instance of iAd
+- (AppDelegate *) appDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadAdvertisements];
     
     self.dependentsLabel.text = [NSString stringWithFormat:@"Dependentes: %@", self.dependentsValue];
     self.grossSalaryLabel.text = [NSString stringWithFormat:@"Salário Bruto: %@", self.grossSalaryValue];
     [self calculateNetSalary];
+}
+
+// Retrieves 'adView' from AppDelegate,
+// assigns it to a local property and injects it
+// as a subview at the bottom of the screen
+- (void)loadAdvertisements {
+    self.adView = [[self appDelegate] adView];
+    self.adView.frame = CGRectMake(self.view.frame.size.width - self.adView.frame.size.width,
+                                   self.view.frame.size.height - self.adView.frame.size.height,
+                                   self.adView.frame.size.width,
+                                   self.adView.frame.size.height);
+    [self.view addSubview:self.adView];
 }
 
 - (void)didReceiveMemoryWarning {
