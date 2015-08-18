@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dependentsLabel;
 @property (weak, nonatomic) IBOutlet UITextField *grossSalaryField;

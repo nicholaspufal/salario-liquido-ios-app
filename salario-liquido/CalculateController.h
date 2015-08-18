@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-@interface CalculateController : UIViewController
+@interface CalculateController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *grossSalaryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dependentsLabel;

@@ -35,7 +35,15 @@
                                    self.view.frame.size.height - self.adView.frame.size.height,
                                    self.adView.frame.size.width,
                                    self.adView.frame.size.height);
+    self.adView.delegate = self;
+
     [self.view addSubview:self.adView];
+}
+
+//Remove adView in case of a failure
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [self.adView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,4 +67,5 @@
     if ([grossSalaryField.text isEqualToString:@""]) return @"0.00";
     return grossSalaryField.text;
 }
+
 @end
