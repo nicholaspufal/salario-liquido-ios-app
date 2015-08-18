@@ -1,6 +1,6 @@
 # Salário líquido - iOS app
 
-This is my first experiment in iOS land :)
+This is my first experiment in iOS land so beware: **this code needs A LOT of ❤️**
 
 It uses a Node.js module that I created to calculate net salaries in Brazil (check [salario-liquido](https://github.com/nicholaspufal/salario-liquido) for more details) which is exposed through a simple service ([salario-liquido-service](https://github.com/nicholaspufal/salario-liquido-service)).
 
